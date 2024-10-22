@@ -1,7 +1,5 @@
 import fs from "fs";
-
-//clase para representar un superheroe
-
+// Clase para representar un Superhéroe
 class Superheroe {
   constructor(
     id,
@@ -30,12 +28,12 @@ class Superheroe {
   }
 }
 
-//funcion para leer y ordenar los superheroes
+// Función para leer y ordenar los superhéroes
 export function leerSuperheroes(ruta) {
   const datos = fs.readFileSync(ruta, "utf8");
   const superheroesArray = JSON.parse(datos);
 
-  //convertir a instancias de superheroe
+  // Convertir a instancias de Superheroe
   const superheroes = superheroesArray.map(
     (hero) =>
       new Superheroe(
@@ -53,11 +51,10 @@ export function leerSuperheroes(ruta) {
       )
   );
 
-  //ordenar por nombre de superheroe
+  // Ordenar por nombre de superhéroe
   superheroes.sort((a, b) =>
     a.nombreSuperheroe.localeCompare(b.nombreSuperheroe)
   );
+
   return superheroes;
 }
-
-

@@ -1,8 +1,8 @@
-import { leerSuperheroes } from "./utils.mjs";
+import { leerSuperheroes } from './utils.mjs';
 
-//leer y mostrar la lista de superheros ordenada
-const superheroes = leerSuperheroes("./superheroes.txt");
-console.log("Superhéros ordenados:");
+// Leer y mostrar la lista de superhéroes ordenada const superheroes leer Superheroes('./superheroes.txt');
+const superheroes = leerSuperheroes('./superheroes.txt'); 
+console.log('Superhéroes ordenados:'); 
 console.log(superheroes);
 
 
